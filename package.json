@@ -1,24 +1,16 @@
 {
-  "name": "mfe-bff-react",
-  "version": "1.0.0",
+  "name": "module-federation-auth-home-dashboard",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "rsbuild build",
-    "dev": "rsbuild",
-    "preview": "rsbuild preview"
-  },
-  "dependencies": {
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "dev": "concurrently \"npm run dev --workspace @app/host\" \"npm run dev --workspace @app/home-dashboard\" \"npm run dev --workspace @app/auth\"",
+    "build": "npm run build --workspaces --if-present",
+    "preview": "npm run preview --workspace @app/host"
   },
   "devDependencies": {
-    "@module-federation/rsbuild-plugin": "^2.9.0",
-    "@rsbuild/core": "^2.2.3",
-    "@rsbuild/plugin-react": "^2.1.0",
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.5",
-    "typescript": "^6.0.3"
+    "concurrently": "^9.1.2"
   }
 }

@@ -1,0 +1,84 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+}
+
+button, a {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.page-card {
+  width: min(760px, 100%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 25px 60px rgba(14, 116, 144, 0.08);
+}
+
+.page-card h1 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.page-card p {
+  color: #475569;
+}
+
+.nav-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button {
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: #0ea5e9;
+  color: white;
+}
+
+.secondary-button {
+  background: #0f172a;
+  color: white;
+}
+
+.ghost-button {
+  background: #e0f2fe;
+  color: #0f172a;
+}
